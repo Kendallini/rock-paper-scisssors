@@ -5,6 +5,8 @@ let options = ['rock','paper', 'scissors'];
  }
 const computerSelection = computerPlay();
 
+
+
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         return 'Tie.'
@@ -22,27 +24,28 @@ function playRound(playerSelection, computerSelection) {
          return 'You win! Paper beats rock.';
      }
     }
+  //  console.log(playRound(playerSelection,computerSelection));
 
 
-    function game() {
-        playRound();
-        let computerSelection=(0);
-        let playerSelection=(0);
+   function game() {
         for (let i=0; i < 5; i++ ){
-           if (playerSelection ++);
-           else (computerSelection ++);
-        }
+          
+          let playerSelection = prompt('Select rock, paper, scissors.');
+        playRound(playerSelection, computerSelection);
+        if (playerSelection ++);
+           else (computerSelection ++);}
     }
-let question = prompt('Select rock, paper, scissors.');
+
+    /*
     if (question.toLowerCase = options) {
          game;
     }
-    
-    //   console.log(playRound(playerSelection, computerSelection));
+    console.log(playRound(playerSelection, computerSelection));
     
 
-  /*  if (playerScore == 5) {
+ if (playerScore == 5) {
         return 'You win!!';
     } else if (computerScore == 5) {
         return 'u lose dumass';
     } */
+

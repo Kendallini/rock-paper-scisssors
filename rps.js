@@ -3,7 +3,6 @@ let options = ['rock','paper', 'scissors'];
  function computerPlay() {
     return options[Math.floor(Math.random() * options.length)];
  }
-const computerSelection = computerPlay();
 
 let playerScore = 0;
 let computerScore = 0;
@@ -11,7 +10,7 @@ let computerScore = 0;
 function playRound(playerSelection, computerSelection) {
     
     if (playerSelection == computerSelection) {
-        return 'Tie.'
+        return 'Tie.';
      } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
         playerScore ++;
     return 'You win! Rock beats scissors';
@@ -33,30 +32,29 @@ function playRound(playerSelection, computerSelection) {
      }
     }
   
-
+    const computerSelection = computerPlay();
   let playerSelection = undefined;
    function game() {
-    
-    playerSelection;
     playRound(playerSelection, computerSelection);
+   
         for (let i=0; i < 5; i++ ){
-        
+           
         let playerSelection = prompt('Select rock, paper, scissors.');
-        computerPlay();
+        let computerSelection = computerPlay();
         console.log(playRound(playerSelection,computerSelection));
         console.log('you', playerScore);
         console.log('computer', computerScore);
-        console.log(computerSelection)
-     
-        /*if (playerScore >= 5) {
-            return 'Winner!';
-        } else if (computerScore == 5){
-               return 'ur a fkn loser.'; 
-           } else (playerScore <5 || computerScore <5) ;
-                return "ya'll suck";
-           }*/
+        console.log(computerSelection);
         }
     }
+        if (playerScore > computerScore) {
+            'Winner!';
+        } else if (computerScore > playerScore){
+               'ur a fkn loser.'; 
+        }
+           
+        
+    
         
                
            
@@ -76,4 +74,3 @@ function playRound(playerSelection, computerSelection) {
     } else if (computerScore == 5) {
         return 'u lose dumass';
     } */
-
